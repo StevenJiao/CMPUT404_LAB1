@@ -1,5 +1,6 @@
 import requests
 
+# Question 2
 print(requests.__version__)
 
 # Question 7
