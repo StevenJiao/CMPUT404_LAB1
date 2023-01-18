@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import socket
 import time
+import os
 
 #define address & buffer size
 HOST = ""
@@ -22,13 +23,16 @@ def main():
         while True:
             conn, addr = s.accept()
             print("Connected by", addr)
-            
-            #recieve data, wait a bit, then send it back
-            full_data = conn.recv(BUFFER_SIZE)
-            time.sleep(0.5)
-            print("Data received: ", full_data.decode())
-            conn.sendall(full_data)
-            conn.close()
+            pid = os.fork()
+            if pid == 0:
+                #recieve data, wait a bit, then send it back
+                full_data = conn.recv(BUFFER_SIZE)
+                time.sleep(0.5)
+                print("Data received: ", full_data.decode())
+                conn.sendall(full_data)
+                conn.close()
+            else:
+                conn.close()
 
 if __name__ == "__main__":
     main()
