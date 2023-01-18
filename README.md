@@ -1,1 +1,3 @@
-CMPUT404 Lab 1
+CMPUT404 Labs
+
+`virtualenv venv --python=python3 && source venv/bin/activate`
