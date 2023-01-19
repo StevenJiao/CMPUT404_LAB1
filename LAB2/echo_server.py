@@ -17,7 +17,7 @@ def main():
         #bind socket to address
         s.bind((HOST, PORT))
         #set to listening mode
-        s.listen(2)
+        s.listen(5)
         
         #continuously listen for connections
         while True:
@@ -25,9 +25,9 @@ def main():
             print("Connected by", addr)
             pid = os.fork()
             if pid == 0:
-                #recieve data, wait a bit, then send it back
+            #recieve data, wait a bit, then send it back
                 full_data = conn.recv(BUFFER_SIZE)
-                time.sleep(0.5)
+                time.sleep(1)
                 print("Data received: ", full_data.decode())
                 conn.sendall(full_data)
                 conn.close()
