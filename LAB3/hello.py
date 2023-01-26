@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import os
-import sys
+import json
 
-for key in os.environ:
-    print(f'{key}={os.environ[key]}')
-
-for key in sys.argv:
-    print(f'{key}')
+# print("Content-type: application/json")
+print("Content-type: text/html")
+print()
+# print(json.dumps(dict(os.environ)))
+print(f"<p>HTTP USER AGENT: { os.environ['HTTP_USER_AGENT'] }<\p>")
