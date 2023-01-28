@@ -22,7 +22,7 @@ handler = CGIHTTPRequestHandler
 port = 8080
 server_address = ("", port)
 # Find CGI scripts in the current working directory.
-handler.cgi_directories = ["/"]
+handler.cgi_directories = ["/", "/hello.py"]
  
 httpd = Server(server_address, handler)
 print("Server listening on http://{}:{}".format(
