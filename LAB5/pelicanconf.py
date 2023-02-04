@@ -1,6 +1,6 @@
 AUTHOR = 'StevenJiao'
 SITENAME = 'CMPUT404 Lab5 Site'
-SITEURL = '/CMPUT404_LABS/'
+SITEURL = 'https://stevenjiao.github.io/CMPUT404_LABS/'
 
 PATH = 'content'
 
