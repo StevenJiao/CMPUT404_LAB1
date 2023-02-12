@@ -3,3 +3,5 @@ venv
 env
 .vscode
 LAB4/mysite/db.sqlite3
+LAB6/heroku
+LAB6/heroku-linux-x64.tar.gz
