@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+import django_on_heroku # top of the file
 import os
 import sys
-import django_on_heroku # top of the file
 
 
 def main():
