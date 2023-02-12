@@ -2,6 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import django_on_heroku # top of the file
 
 
 def main():
@@ -20,3 +21,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+django_on_heroku.settings(locals()) # bottom of the file    
